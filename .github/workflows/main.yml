@@ -1,0 +1,31 @@
+name: TG_Purifier_Service
+
+on:
+  schedule:
+    - cron: '*/59 * * * *'  # 每 59 分钟执行一次 (UTC 时间)
+  workflow_dispatch:        # 允许你在网页上手动点击按钮立即执行
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install Dependencies
+        run: |
+          pip install telethon pysocks
+
+      - name: Run Purifier
+        env:
+          # 将 GitHub Secrets 映射为脚本可见的环境变量
+          TG_API_ID: ${{ secrets.TG_API_ID }}
+          TG_API_HASH: ${{ secrets.TG_API_HASH }}
+          TG_STRING_SESSION: ${{ secrets.TG_STRING_SESSION }}
+          PRIVATE_CHANNEL_ID: ${{ secrets.PRIVATE_CHANNEL_ID }}
+        run: python sync_purifier.py
