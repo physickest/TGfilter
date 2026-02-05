@@ -10,7 +10,7 @@ jobs:
     strategy:
       # 这里的 matrix 就是你的“频道清单”
       matrix:
-        channel: [Seele_Leaks, HXG_Leak]
+        channel: [Seele_Leaks, homokeqing]
       # 设为 1 表示一个一个跑，天然形成频道间的“时间间隔”
       max-parallel: 1 
       fail-fast: false
