@@ -4,7 +4,6 @@ import time
 import re
 from telethon import TelegramClient, errors
 from telethon.sessions import StringSession
-from config import USER_StringSession,PRIVATE_channel_id
 
 # --- 环境变量读取 (SOTA 安全实践) ---
 API_ID = int(os.getenv('TG_API_ID', 2040))
