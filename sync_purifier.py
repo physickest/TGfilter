@@ -74,7 +74,7 @@ async def main():
     async with client:
         print("[*] 成功连接 Telegram。开始处理队列...")
         now = time.time()
-        lookback = 1.5 * 3600 # 1.5 小时窗口冗余
+        lookback = 7 * 3600 # 1.5 小时窗口冗余
         
         for channel_name, rules in CHANNEL_RULES.items():
             try:
