@@ -21,7 +21,7 @@ jobs:
     # 这意味着：Seele_Leaks 的新任务会取消旧的 Seele_Leaks，但绝不会影响 HXG_Leak
     concurrency:
       group: tg-purifier-${{ matrix.channel }}
-      cancel-in-progress: true
+      cancel-in-progress: false
 
     steps:
       - uses: actions/checkout@v3
