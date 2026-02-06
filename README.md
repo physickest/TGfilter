@@ -29,7 +29,7 @@ filter for TG
 
 ## 3. 实验记录：Failure Case 分析
 
-### 3.1 测试样本描述
+### 3.1 测试样本描述(见文末)
 
 * **样本 A**：绝区零 (ZZZ) 角色艾莲·乔 (Ellen Joe) 剧情插画。
 * **样本 B & C**：绝区零角色艾莲、朱鸢的头像。
@@ -76,5 +76,49 @@ filter for TG
 本次实验的挫败是通往 PhD 的必经之路。在硅谷，我们不相信 100% 的准确率，我们相信**系统的鲁棒性（Robustness）**。请记住：**不要为了那 10% 的模型失效而回退到手动操作，去用工程架构去约束那 10% 的不确定性。**
 
 ---
+## 实验样本归档 (Experimental Samples)
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="[这里填SampleA的链接](https://github.com/user-attachments/assets/21bebd17-1241-454b-b111-b258d479c0da)" width="400px"/><br/>
+      <b>Sample A: ZZZ Illustration</b>
+    </td>
+    <td align="center">
+      <img src="[这里填SampleB的链接](https://github.com/user-attachments/assets/6a621746-668b-45ff-86c3-ca235cb427f4)" width="200px"/><br/>
+      <b>Sample B: ZZZ Avatar (Ellen)</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="[这里填SampleC的链接](https://github.com/user-attachments/assets/b1781520-b97b-4cdf-8dff-ddace8740e61)" width="200px"/><br/>
+      <b>Sample C: ZZZ Avatar (Zhu Yuan)</b>
+    </td>
+    <td align="center">
+      <img src="[这里填SampleD的链接](https://github.com/user-attachments/assets/c988b3e2-1e05-467f-95a2-8086dd923ebd)" width="400px"/><br/>
+      <b>Sample D: HSR Leak (Robin & Misha)</b>
+    </td>
+  </tr>
+</table>
+
+##  Original Post
+SampleA: https://t.me/Seele_Leaks/26025
+"
+（Spolier）
+缺失的图片
+"
+
+SampleB/C: https://t.me/Seele_Leaks/26031
+"
+头像
+"
+
+SampleD: https://t.me/Seele_Leaks/26007
+"
+［ZZZ 2.6Pre］
+（Spolier）
+？？？与维琳娜，诺姆的对话
+"
+
 
 *Generated for the TG-Filter Project. Copyright 2026.*
