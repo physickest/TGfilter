@@ -14,8 +14,6 @@ filter for TG   【currently not with AI used. Looking forward to a breakthrough
 
 **实验日期**：2026-02-06
 
-**研究视角**：硅谷 Tech Lead / AI PhD Candidate (Fall 26)
-
 **文档状态**：Final Release
 
 ---
@@ -77,7 +75,7 @@ Those descriptions were made by Gemini in 2026.2.6 which were definitely wrong.
 
 ## 7. Tech Lead 寄语 (Final Note)
 
-本次实验的挫败是通往 PhD 的必经之路。在硅谷，我们不相信 100% 的准确率，我们相信**系统的鲁棒性（Robustness）**。请记住：**不要为了那 10% 的模型失效而回退到手动操作，去用工程架构去约束那 10% 的不确定性。**
+本次实验的挫败是通往 PhD 的必经之路。我们不相信 100% 的准确率，我们相信**系统的鲁棒性（Robustness）**。请记住：**不要为了那 10% 的模型失效而回退到手动操作，去用工程架构去约束那 10% 的不确定性。**
 
 ---
 ## 实验样本归档 (Experimental Samples)
