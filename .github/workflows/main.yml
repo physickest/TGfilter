@@ -1,0 +1,42 @@
+name: TG_Purifier_Matrix_Service
+
+on:
+  schedule:
+    - cron: '15 * * * *'
+  workflow_dispatch:
+
+jobs:
+  purify:
+    strategy:
+      # 这里的 matrix 就是你的“频道清单”
+      matrix:
+        channel: [Seele_Leaks, homokeqing]
+      # 设为 1 表示一个一个跑，天然形成频道间的“时间间隔”
+      max-parallel: 1 
+      fail-fast: false
+
+    runs-on: ubuntu-latest
+    
+    # 【核心改进】并发锁现在是基于“频道名”的
+    # 这意味着：Seele_Leaks 的新任务会取消旧的 Seele_Leaks，但绝不会影响 HXG_Leak
+    concurrency:
+      group: tg-purifier-${{ matrix.channel }}
+      cancel-in-progress: false
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      - name: Install Deps
+        run: pip install telethon pysocks
+      - name: Run Task
+        env:
+          TG_API_ID: ${{ secrets.TG_API_ID }}
+          TG_API_HASH: ${{ secrets.TG_API_HASH }}
+          TG_STRING_SESSION: ${{ secrets.TG_STRING_SESSION }}
+          PRIVATE_CHANNEL_ID: ${{ secrets.PRIVATE_CHANNEL_ID }}
+          # 告诉脚本本次 Job 只负责哪一个频道
+          CURRENT_CHANNEL: ${{ matrix.channel }}
+        run: python sync_purifier.py
